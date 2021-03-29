@@ -1,0 +1,61 @@
+body {
+  background-image: url("./background-image/oriental-tiles.png");
+}
+
+#title {
+  color: gold;
+  text-align: center;
+  margin: auto;
+  margin-top: 1.8em;
+  font-family: lobster;
+  font-size: 2em;
+}
+#sketchContainer {
+  width: 30em;
+  height: 35em;
+  border: 0.25em solid gold;
+  border-radius: 2em;
+  margin: auto;
+  background-color: gold;
+  opacity: 0.8;
+}
+#sketchBox {
+  margin: auto;
+  margin-top: 0.75em;
+  width: 28em;
+  height: 28em;
+  border: 0.25em solid rgb(5, 5, 87);
+
+  display: grid;
+  
+  
+}
+
+.sketch {
+
+  border: 1px solid rgb(5, 5, 87);
+  background-color: #f4f4f4;
+  height: 100%;
+}
+
+#btnContainer {
+    display: flex;
+    margin: 1em;
+    margin-left: 2em;
+    
+}
+
+#rangeContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: .5em;
+    
+    
+}
+#rangeContainer p{
+    margin: -.15em;
+    font-family: lobster;
+    font-size: 1.3em;
+    color: rgb(5, 5, 87);
+}
