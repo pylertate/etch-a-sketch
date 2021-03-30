@@ -17,7 +17,7 @@ body {
   border-radius: 2em;
   margin: auto;
   background-color: gold;
-  opacity: 0.8;
+  
 }
 #sketchBox {
   margin: auto;
@@ -25,6 +25,8 @@ body {
   width: 28em;
   height: 28em;
   border: 0.25em solid rgb(5, 5, 87);
+  
+background-color: #f4f4f4;
 
   display: grid;
   
@@ -36,18 +38,21 @@ body {
   border: 1px solid rgb(5, 5, 87);
   background-color: #f4f4f4;
   height: 100%;
+  
 }
 
 #btnContainer {
     display: flex;
+    justify-content: space-between;
     margin: 1em;
     margin-left: 2em;
+    margin-right: 2em;
     
 }
 
 #rangeContainer{
     display: flex;
-    justify-content: center;
+    
     flex-direction: column;
     margin-top: .5em;
     
@@ -58,4 +63,24 @@ body {
     font-family: lobster;
     font-size: 1.3em;
     color: rgb(5, 5, 87);
+}
+
+#resetBtn{
+    background-color: gold;
+    border: .25em solid rgb(5, 5, 87);
+    border-radius: 1em;
+    font-size: 1.3em;
+    font-family: lobster;
+    padding: .5em;
+    
+}
+
+#toggleBtn{
+    background-color: gold;
+    border: .25em solid rgb(5, 5, 87);
+    border-radius: 1em;
+    font-size: 1.3em;
+    font-family: lobster;
+    padding: .5em;
+
 }
