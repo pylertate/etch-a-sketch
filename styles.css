@@ -45,8 +45,7 @@ background-color: #f4f4f4;
     display: flex;
     justify-content: space-between;
     margin: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
+   
     
 }
 
@@ -65,22 +64,21 @@ background-color: #f4f4f4;
     color: rgb(5, 5, 87);
 }
 
-#resetBtn{
-    background-color: gold;
+
+
+.buttons{
+  background-color: gold;
     border: .25em solid rgb(5, 5, 87);
     border-radius: 1em;
     font-size: 1.3em;
     font-family: lobster;
     padding: .5em;
-    
 }
 
-#toggleBtn{
-    background-color: gold;
-    border: .25em solid rgb(5, 5, 87);
-    border-radius: 1em;
-    font-size: 1.3em;
-    font-family: lobster;
-    padding: .5em;
-
+.buttons:hover{
+  background-color: rgb(5, 5, 87);
+  color: gold;
+  transform: scale(1.05);
+  font-size: 1.4em;
 }
+
