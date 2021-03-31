@@ -11,9 +11,13 @@ const resetBtn = document.querySelector("#resetBtn");
 const toggleBtn = document.querySelector("#toggleBtn");
 
 // eraser button
-const eraserBtn = document.querySelector("#eraserBtn")
-
+const eraserBtn = document.querySelector("#eraserBtn");
+// this is the defalut color that is read by the various color funtions
 let color = "rgb(5 5 87)";
+
+let revertColor = color;
+
+let eraserOn = false;
 
 // Functions /////////////////////////////////////////////////
 
@@ -37,6 +41,29 @@ const removeSketch = function () {
   }
 };
 
+toggleBtn.addEventListener("click", () => {
+  switch (eraserOn) {
+    case (eraserOn = true):
+      break;
+    case (eraserOn = false):
+      switch (color) {
+        case (color = "rgb(5 5 87)"):
+          color = "green";
+
+          break;
+        case (color = "green"):
+          color = "purple";
+
+          break;
+        case (color = "purple"):
+          color = "rgb(5 5 87)";
+          break;
+      }
+      revertColor = color;
+      break;
+  }
+});
+
 // changes grid size this is called back in the range event listener
 const createGrid = function (number) {
   removeSketch();
@@ -52,34 +79,29 @@ const createGrid = function (number) {
 };
 
 // creates 16 x 16 grid by default
-createGrid(16);
+
 // adds function ot range that allows resize of grids
 sketchRange.addEventListener("input", () => {
   let number = event.target.value;
   createGrid(number);
 });
 
-toggleBtn.addEventListener("click", () => {
-  switch(color){
-    case (color = "rgb(5 5 87)"):
-      color = "green";
+eraserBtn.addEventListener("click", () => {
+  switch (eraserOn) {
+    case (eraserOn = false):
+      color = "#f4f4f4";
+      eraserOn = true;
+      eraserBtn.style.cssText = "background-color: rgb(5 5 87);color: gold";
       break;
-    case (color = "green"):
-      color = "purple";
-      break;
-    case (color = "purple"):
-      color = "rgb(5 5 87)"
-      break;
-    case (color = "#f4f4f4"):
-      color = "rgb(5 5 87)";
+    case (eraserOn = true):
+      color = revertColor;
+      eraserOn = false;
+      eraserBtn.style.cssText = "background-color: gold; color: rgb(5 5 87)";
       break;
   }
+  return color;
 });
 
-eraserBtn.addEventListener("click", ()=>{
-  color = "#f4f4f4"
-} );
-
-
+createGrid(16);
 
 // add functionality to reset button
