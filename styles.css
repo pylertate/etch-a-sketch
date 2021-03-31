@@ -71,3 +71,7 @@ body {
   transform: scale(1.05);
   font-size: 1.4em;
 }
+.buttonClicked{
+  background-color: rgb(5, 5, 87);
+  color: gold;
+}

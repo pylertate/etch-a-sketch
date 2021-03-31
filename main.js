@@ -91,12 +91,14 @@ eraserBtn.addEventListener("click", () => {
     case (eraserOn = false):
       color = "#f4f4f4";
       eraserOn = true;
-      eraserBtn.style.cssText = "background-color: rgb(5 5 87);color: gold";
+      
+      eraserBtn.classList.add("buttonClicked")
       break;
     case (eraserOn = true):
       color = revertColor;
       eraserOn = false;
-      eraserBtn.style.cssText = "background-color: gold; color: rgb(5 5 87)";
+      
+      eraserBtn.classList.remove("buttonClicked")
       break;
   }
   return color;
